@@ -1,0 +1,31 @@
+创建容器
+docker run --name kaggle  -v D:/kaggle:/tmp/working/kaggle  -w=/tmp/working -p 8888:8888 -d  -it kaggle/python  jupyter notebook --no-browser --ip="0.0.0.0" --notebook-dir=/tmp/working --allow-root
+
+进入容器找到token
+docker exec -it kaggle bash
+
+jupyter notebook list
+
+exit
+
+停止容器
+docker stop
+
+重启容器
+docker start
+
+查看容器
+docker ps / docker ps -a
+
+删除容器
+docker rm
+
+查看镜像
+docker images
+
+删除镜像
+docker rmi
+
+
+
+token=8b7513a7323f1e9318a8f2723385766f9fd04e0deca48363
